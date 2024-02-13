@@ -1,17 +1,17 @@
 # ApiRestTurismo
 
-#Recursos Utilizados
+#Recursos Utilizados<br>
 He utilizado una base de datos en la que represento una tabla de Museos con su insert de 20 museos de Málaga y otra tabla de Eventos con su insert de 20 eventos de Málaga, aparte tengo otra tabla de Usuarios con su insert de 5 usuarios con tokens de seguridad.
 
 #EndsPoints
 MuseoController:
     @GetMapping("/get/")
     @GetMapping("/getId/{id}")
-    @GetMapping("/getNombre/")
-    @GetMapping("/getDireccion/")
-    @GetMapping("/getUrl/")
-    @GetMapping("/getEmail/")
-    @GetMapping("/getTitularidad/")
+    @GetMapping("/getNombre/{nombre}")
+    @GetMapping("/getDireccion/{direccion}")
+    @GetMapping("/getUrl/{url}")
+    @GetMapping("/getEmail/{email}")
+    @GetMapping("/getTitularidad/{titularidad}")
     @PostMapping("/post/{email}")
     @PutMapping("/put/{id}/{email}")
     @DeleteMapping("/delete/{id}/{email}")
