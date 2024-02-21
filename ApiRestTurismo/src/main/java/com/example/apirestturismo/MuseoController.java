@@ -49,7 +49,7 @@ public class MuseoController {
      * @param nombre Nombre del museo a buscar.
      * @return ResponseEntity con la lista de museos encontrados y HttpStatus OK.
      */
-    @GetMapping("/getNombre/")
+    @GetMapping("/getNombre/{nombre}")
     public ResponseEntity<List<Museo>> getNombre (@PathVariable String nombre){
         return new ResponseEntity<>(museoRepository.getMuseosByNombre(nombre), HttpStatus.OK);
     }
@@ -60,7 +60,7 @@ public class MuseoController {
      * @param direccion Dirección del museo a buscar.
      * @return ResponseEntity con la lista de museos encontrados y HttpStatus OK.
      */
-    @GetMapping("/getDireccion/")
+    @GetMapping("/getDireccion/{direccion}")
     public ResponseEntity<List<Museo>> getDireccion (@PathVariable String direccion){
         return new ResponseEntity<>(museoRepository.getMuseosByDireccion(direccion), HttpStatus.OK);
     }
@@ -71,7 +71,7 @@ public class MuseoController {
      * @param url URL del museo a buscar.
      * @return ResponseEntity con la lista de museos encontrados y HttpStatus OK.
      */
-    @GetMapping("/getUrl/")
+    @GetMapping("/getUrl/{url}")
     public ResponseEntity<List<Museo>> getUrl (@PathVariable String url){
         return new ResponseEntity<>(museoRepository.getMuseosByUrl(url), HttpStatus.OK);
     }
@@ -82,7 +82,7 @@ public class MuseoController {
      * @param email Email del museo a buscar.
      * @return ResponseEntity con la lista de museos encontrados y HttpStatus OK.
      */
-    @GetMapping("/getEmail/")
+    @GetMapping("/getEmail/{email}")
     public ResponseEntity<List<Museo>> getEmail (@PathVariable String email){
         return new ResponseEntity<>(museoRepository.getMuseosByEmail(email), HttpStatus.OK);
     }
@@ -93,7 +93,7 @@ public class MuseoController {
      * @param titularidad Titularidad del museo a buscar.
      * @return ResponseEntity con la lista de museos encontrados y HttpStatus OK.
      */
-    @GetMapping("/getTitularidad/")
+    @GetMapping("/getTitularidad/{titularidad}")
     public ResponseEntity<List<Museo>> getTitularidad (@PathVariable String titularidad){
         return new ResponseEntity<>(museoRepository.getMuseosByTitularidad(titularidad), HttpStatus.OK);
     }
